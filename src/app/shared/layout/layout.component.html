@@ -1,0 +1,12 @@
+<mat-sidenav-container>
+    <mat-sidenav class="mat-drawer-color" #sidenav role="navigation">
+        <app-sidebar (sidenavClose)="sidenav.close()"></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+        <router-outlet>
+        </router-outlet>
+        <app-footer>
+        </app-footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

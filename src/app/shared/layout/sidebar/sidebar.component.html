@@ -1,0 +1,27 @@
+<mat-nav-list>
+    <div *ngFor="let entry of menuOptionsList">
+        <div *ngIf="!entry.DropDown">
+            <a (click)="navigate(entry.Route)">
+                <span class="nav-caption">{{entry.Description}}</span>
+            </a>
+        </div>
+        <div *ngIf="entry.DropDown">
+            <mat-list-item class="mat-menu-panel-color" [matMenuTriggerFor]="menu">
+                <mat-icon>unfold_more</mat-icon>
+                <a matline> {{entry.Description}}</a>
+            </mat-list-item>
+            <mat-menu #menu="matMenu">
+                <button class="mat-menu-panel-color" mat-menu-item *ngFor="let option of entry.MenuOptionsList" (click)="navigate(option.Route)">{{option.Description}}</button>
+            </mat-menu>
+        </div>
+    </div>
+    <!-- <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
+        <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Owner Actions</span>
+    </a>
+    <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+        <mat-icon>account_balance</mat-icon><span class="nav-caption">Account Actions</span>
+    </a> -->
+    <a mat-list-item (click)="goToLogin()">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;{{buttonSession}}
+    </a>
+</mat-nav-list>

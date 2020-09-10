@@ -1,0 +1,75 @@
+<section class="wrapper">
+    <section class="container">
+
+        <br>
+        <h3>Registro</h3>
+        <section class="card col-md-6 mr-auto ml-auto">
+            <form [formGroup]="registerForm" novalidate>
+                <section class="card-body">
+                    <section class="form-group row">
+                        <label for="name" class="col-sm-3 col-form-label">Nombre</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" formControlName="name" id="name">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && registerForm.get('name').errors">
+                                {{getErrorMessage('name')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="form-group row">
+                        <label for="lastName" class="col-sm-3 col-form-label">Apellido</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" formControlName="lastName" id="lastName">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && registerForm.get('lastName').errors">
+                                {{getErrorMessage('lastName')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="form-group row">
+                        <label for="identity" class="col-sm-3 col-form-label">Cédula</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" formControlName="identity" id="identity">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && registerForm.get('identity').errors">
+                                {{getErrorMessage('identity')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="form-group row">
+                        <label for="phone" class="col-sm-3 col-form-label">Teléfono</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" formControlName="phone" id="phone">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && registerForm.get('phone').errors">
+                                {{getErrorMessage('phone')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="form-group row">
+                        <label for="email" class="col-sm-3 col-form-label">Correo</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" formControlName="email" type="email" id="email">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && registerForm.get('email').errors">
+                                {{getErrorMessage('email')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="form-group row">
+                        <label for="password" class="col-sm-3 col-form-label">Contraseña</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" formControlName="password" id="password">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && registerForm.get('password').errors">
+                                {{getErrorMessage('password')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="d-flex justify-content-center">
+                        <button type="submit" (click)="register()" class="btn btn-primary">Registrarme</button>
+                    </section>
+                </section>
+            </form>
+        </section>
+    </section>

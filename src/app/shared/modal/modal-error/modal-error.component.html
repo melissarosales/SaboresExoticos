@@ -1,0 +1,28 @@
+<div class="">
+    <div class="row row-not-margin ml-4 mr-4">
+        <div class="mx-auto mt-5 mb-4 " *ngIf="status == 'warning'">
+        </div>
+        <div class="mx-auto mt-5 mb-4 " *ngIf="status == 'success'">
+        </div>
+        <div class="mx-auto mt-2" *ngIf="status == 'error'">
+            <section class="mr-auto ml-auto">
+                <i class="fa fa-exclamation-triangle fa-4x" style="color: red;" href="# " aria-hidden="true "></i>
+            </section>
+        </div>
+        <div class="mx-auto mt-5 mb-4 " *ngIf="status == 'info'">
+        </div>
+    </div>
+    <div class="row row-not-margin ml-5 mr-5 mt-3">
+        <label class="label-title">{{labelTitile}}</label>
+    </div>
+    <div class="row row-not-margin ml-5 mr-5 mt-2">
+        <label class="label-description">{{textDescription}}</label>
+    </div>
+    <div class="row row-not-margin ml-4 mr-4 mb-1">
+        <div class=" offset-md-8 col-md-4 text-right ">
+            <button mat-flat-button class="btn-save w-100 " mat-dialog-close>
+          Aceptar
+        </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+@import "../../../styles.scss";
+.mat-drawer-color {
+    // let's take mat-toolbar's default theme
+    // ref: https://github.com/angular/material2/blob/88601fa51d581f538468a9b63890b0e285e519cb/src/lib/toolbar/_toolbar-theme.scss#L39
+    background-color: $darkBrown!important;
+    color: $yellow !important;
+}

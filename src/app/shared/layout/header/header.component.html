@@ -1,0 +1,41 @@
+<mat-toolbar>
+    <div fxHide.gt-sm>
+        <button style="color:#DAA640;" mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a class="navbar-brand" href="#">
+            <img src="http://drive.google.com/uc?export=view&id=1JSb6mIOuTEK4m_vBat7i-l-X4b05HjG_" alt="">
+        </a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.sm fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li *ngFor="let entry of menuOptionsList" class="nav-item">
+                <a (click)="navigate(entry.Route)" *ngIf="!entry.DropDown" class="nav-link">{{entry.Description}}</a>
+                <section *ngIf="entry.DropDown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{entry.Description}}
+                    </a>
+                    <section class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" *ngFor="let option of entry.MenuOptionsList" (click)="navigate(option.Route)">{{option.Description}}</a>
+                    </section>
+                </section>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    IDIOMA
+                </a>
+                <section class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">ES</a>
+                    <section class="dropdown-sectionider"></section>
+                    <a class="dropdown-item" href="#">EN</a>
+                </section>
+            </li>
+            <li class="nav-item">
+                <a class="btn-login btn my-2 my-sm-0" (click)="goToLogin()"> <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;{{buttonSession}}</a>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>

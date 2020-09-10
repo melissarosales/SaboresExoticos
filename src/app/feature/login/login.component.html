@@ -1,0 +1,39 @@
+<section class="wrapper">
+    <section class="container">
+        <br>
+        <h3>Ingreso</h3>
+        <section class="card col-md-6 mr-auto ml-auto">
+            <form [formGroup]="loginForm" novalidate>
+                <section class="card-body">
+                    <section class="form-group row">
+                        <label for="email" class="col-sm-3 col-form-label">Correo</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" type="email" formControlName="Email" id="email">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && loginForm.get('Email').errors">
+                                {{getErrorMessage('Email')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="form-group row">
+                        <label for="password" class="col-sm-3 col-form-label">Contraseña</label>
+                        <section class="col-sm-9">
+                            <input class="form-control" type="password" formControlName="Password" id="password">
+                            <!-- estilo para input error is-invalid -->
+                            <div class="invalid-feedback text-left" *ngIf="submitted && loginForm.get('Password').errors">
+                                {{getErrorMessage('Password')}}
+                            </div>
+                        </section>
+                    </section>
+                    <section class="d-flex justify-content-center mb-3">
+                        <a>¿Aún no tienes una cuenta?&nbsp;</a>
+                        <a class="register-a" (click)="goToRegister()">Regístrate</a>
+                    </section>
+                    <section class="d-flex justify-content-center">
+                        <button type="submit" (click)="login()" class="btn btn-primary">Ingresar</button>
+                    </section>
+                </section>
+            </form>
+        </section>
+    </section>
+</section>

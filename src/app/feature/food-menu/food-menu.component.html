@@ -1,0 +1,38 @@
+<section class="wrapper">
+    <section class="container" style="margin-bottom: 20rem;">
+        <br>
+        <h3>Nuestro menú</h3>
+        <section class="row">
+            <section class="col-md-6">
+                <section class="card card-body  mt-5" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 5px; height: 26.7rem; overflow: auto;">
+                    <section class="list-group" id="list-tab" role="tablist">
+                        <a *ngFor="let entry of foodCategoryList" (click)="filterFoodList(entry.Id)" class="list-group-item list-group-item-action span-menu-group-food" id="entry.Id" data-toggle="list" href="#entry.Id" role="tab" aria-controls="entry.Name">{{entry.Name}}</a>
+                    </section>
+                </section>
+            </section>
+            <section class="col-md-6">
+                <section class="card card-body  mt-5" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 5px; height: 26.7rem; overflow: auto;">
+                    <section class="tab-content" id="nav-tabContent">
+                        <section class="tab-pane fade show active" id="list-breakfast" role="tabpanel" aria-labelledby="list-breakfast-list">
+
+                            <section *ngFor="let entry of filteredFoodList" class="row ml-1 mb-1">
+                                <section class="col-md-9">
+                                    <h5>{{entry.Name}}</h5>
+                                </section>
+                                <section class="col-md-3">
+                                    <h5>₡{{entry.Price}}</h5>
+                                </section>
+                                <section class="col-md-9">
+                                    <p>{{entry.Description}}</p>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+
+
+    </section>
+</section>

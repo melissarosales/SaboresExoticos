@@ -1,0 +1,8 @@
+@import "../../../variable.scss";
+@import "../../../../styles.scss";
+.up_btn {
+    background-color: transparent;
+    border: 2px solid $darkBrown;
+    border-radius: 22px;
+    color: $darkBrown;
+}

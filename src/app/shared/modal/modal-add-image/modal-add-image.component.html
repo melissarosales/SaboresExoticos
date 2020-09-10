@@ -1,0 +1,22 @@
+<section class="card card-body mb-3">
+    <section class="row  ml-1">
+        <h5>Agregar nueva imagen</h5>
+    </section>
+    <form>
+        <section class="row mt-1">
+            <label for="ubication" class="col-md-5">Ubicación:</label>
+            <select id="ubication" class="col-md-7 custom-select">
+                <option>Banner Principal</option>
+                <option>Platillos destacados</option>
+                <option>Logo</option>
+            </select>
+        </section>
+        <section class="row mb-2">
+            <angular-file-uploader [config]="afuConfig" [resetUpload]="resetVar" (ApiResponse)="uploadImage($event)">
+            </angular-file-uploader>
+        </section>
+    </form>
+    <section class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </section>
+</section>

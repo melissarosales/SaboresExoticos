@@ -1,0 +1,121 @@
+@import '../../../variable.scss';
+.button {
+    background-color: #C10000 !important;
+    border: none !important;
+    display: block !important;
+    margin: auto !important;
+    width: 52% !important;
+    height: 46px !important;
+    border-radius: 4rem !important;
+    color: #fff !important;
+    margin-bottom: 2% !important;
+}
+
+.bg-error-modal {
+    background: #C10000;
+}
+
+.title-modal {
+    text-align: center;
+}
+
+.subtitle-modal {
+    text-align: center;
+}
+
+.feedback-modal-title {
+    font-family: $roboto-bold;
+    font-size: $font-size-medium;
+    color: #C10000;
+    text-align: center;
+}
+
+.modal-error {
+    // border-top: 3px solid #C10000;
+    // border-bottom: 3px solid #C10000;
+}
+
+.feedback-modal-description {
+    font-family: $roboto-regular;
+    font-size: $font-size-small;
+    color: gray;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.feedback-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 6.7rem !important;
+    width: 7rem !important;
+    font-size: 127px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-save {
+    background: #0171b1;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    color: #fff;
+    font-family: "Roboto Bold";
+}
+
+
+/*.error {
+  color: #C10000;
+  //border: 3px solid  white;
+}*/
+
+
+/*.success {
+  color: $dark-blue;
+}*/
+
+
+/*.warning {
+  color: #ffc107;
+}*/
+
+.bd-modal-error {
+    .button-check {
+        width: 9.75rem;
+        background-color: $primaryColor;
+        color: #ffffff;
+        border-radius: 7px;
+        height: 3.25rem;
+    }
+    .button-check {
+        // width: 8rem;
+        background-color: #C10000;
+        color: #ffffff;
+        // border-radius: 7px;
+    }
+}
+
+.bg-transparent {
+    border-top: 2px solid #C10000;
+    border-bottom: 2px solid #C10000;
+    padding-top: 0.5rem;
+}
+
+.cdk-overlay-pane {
+    //border: 11px solid #C10000;
+    border-left: none;
+    border-right: none;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 1900px) {
+    .feedback-icon {
+        background-repeat: no-repeat;
+        display: inline-block;
+        fill: currentColor;
+        height: 6.7rem !important;
+        width: 7rem !important;
+        font-size: 127px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

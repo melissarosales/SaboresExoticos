@@ -1,0 +1,10 @@
+@import "../../variable.scss";
+@import "../../../styles.scss";
+.register-a {
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    text-decoration-line: underline !important;
+    text-decoration-style: initial !important;
+    text-decoration-color: $yellow !important;
+    cursor: pointer;
+}
